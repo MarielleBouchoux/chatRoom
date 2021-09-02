@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Modele</title>
+		<script src="http://localhost:3001/socket.io/socket.io.js"></script>
+      </head>
+      <body>
+        <div id="root"></div>
+        <!-- <script src="http://localhost:3001/socket.io/socket.io.js"></script>
+        <script>
+          // on crée un canal d'échange entre l'app et le server websocket
+          // notre application tourne sur le serveur localhost:8080
+          // il faut donc préciser l'adresse du serveur websocket
+          const socket = window.io('http://localhost:3001');
+
+          // on écoute les messages que va nous envoyer le serveur
+          socket.on('server_message', (res) => {
+            console.log(`le serveur envoie un message`, res);
+          });
+
+          // on envoie un message directement au serveur
+          socket.emit('client_message', {});
+        </script> -->
+    </body>
+</html>

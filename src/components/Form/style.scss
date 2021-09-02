@@ -1,0 +1,30 @@
+@use 'src/styles/vars' as v;
+
+.form {
+  display: flex;
+  position: relative;
+  &__input {
+    flex: 1;
+    border: none;
+    padding: v.$gutter * 2;
+    font-size: 1.5em;
+    &::placeholder {
+      font-size: inherit;
+      opacity: .5;
+    }
+    &--error {
+      background-color: rgb(248, 205, 205);
+      border: 2px solid rgb(172, 48, 48);
+    }
+  }
+  &__button {
+    border: none;
+    width: 100px;
+    background-color: white;
+  }
+  .error-message {
+    color: red;
+    position: absolute;
+    top: -20px;
+  }
+}

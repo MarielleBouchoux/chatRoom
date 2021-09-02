@@ -1,0 +1,62 @@
+@use 'src/styles/vars' as v;
+
+.messages {
+  padding: v.$gutter * 2;
+  flex: 1;
+  overflow: auto;
+}
+
+.message {
+  font-size: .8em;
+  margin-bottom: v.$gutter * 2;
+  &__author {
+    margin: 0 v.$gutter * 2 v.$gutter;
+  }
+  &__content {
+    position: relative;
+    animation: pop .5s cubic-bezier(0.63, -0.02, 0.57, 1.57);
+    background-color: white;
+    padding: v.$gutter * 2 v.$gutter * 1.5;
+    border-radius: 50px;
+    display: inline-block;
+    min-width: 150px;
+    color: v.$color-blue;
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-color: transparent transparent #fff;
+      border-style: solid;
+      border-width: 0 0 20px 20px;
+      top: -10px;
+      left: 30px;
+    }
+  }
+  &--is-mine {
+    text-align: right;
+    .message__content {
+      &::before {
+        border-color: transparent transparent transparent #ffffff;
+        border-style: solid;
+        border-width: 20px 0 0 20px;
+        top: -10px;
+        right: 30px;
+        left: auto;
+        color: blue;
+      }
+    }
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

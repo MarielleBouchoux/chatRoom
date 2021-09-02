@@ -1,0 +1,11 @@
+@use 'src/styles/vars' as v;
+
+.chatroom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 800px;
+  background-color: v.$color-light-blue;
+  margin: 0 auto;
+  height: 100vh;
+}
