@@ -15,11 +15,5 @@ const store = createStore(reducer, composeEnhancers(
   applyMiddleware(auth, socket),
 ));
 
-// const store = createStore(
-//   reducer,
-//   // © Marielle
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
-
 // ne pas oublier d'exporter / exposer le store
 export default store;
